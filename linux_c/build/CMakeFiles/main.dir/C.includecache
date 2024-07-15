@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,15 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/home/liuao/linux_/linux_c/src/main.c
+/home/liuao/imx_app/linux_c/src/main.c
 stdio.h
-/home/liuao/linux_/linux_c/src/stdio.h
+/home/liuao/imx_app/linux_c/src/stdio.h
 unistd.h
 -
 sys/types.h
-/home/liuao/linux_/linux_c/src/sys/types.h
+/home/liuao/imx_app/linux_c/src/sys/types.h
 stdlib.h
 -
 pthread.h
+-
+stdio.h
+/home/liuao/imx_app/linux_c/src/stdio.h
+sys/stat.h
+-
+fcntl.h
+-
+string.h
 -
 

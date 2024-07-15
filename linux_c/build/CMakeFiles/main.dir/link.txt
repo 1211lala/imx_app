@@ -1,1 +1,1 @@
-/usr/bin/cc    CMakeFiles/main.dir/src/main.c.o  -o bin/main  -lpthread 
+arm-linux-gnueabihf-gcc     CMakeFiles/main.dir/src/main.c.o  -o bin/main -rdynamic -lpthread 

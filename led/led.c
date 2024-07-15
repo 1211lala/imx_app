@@ -15,6 +15,7 @@
                                 " %s <trigger> <type>\n", \
                         argv[0], argv[0])
 
+
 int main(int argc, char *argv[])
 {
     int fd1, fd2;
