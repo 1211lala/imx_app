@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/liuao/linux_/linux_c/src/main.c
+stdio.h
+/home/liuao/linux_/linux_c/src/stdio.h
+unistd.h
+-
+sys/types.h
+/home/liuao/linux_/linux_c/src/sys/types.h
+stdlib.h
+-
+pthread.h
+-
+

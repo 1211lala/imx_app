@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/liuao/file_io/src/main.c
+stdio.h
+/home/liuao/file_io/src/stdio.h
+sys/types.h
+-
+sys/stat.h
+-
+fcntl.h
+-
+unistd.h
+-
+string.h
+-
+
