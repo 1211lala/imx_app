@@ -1,6 +1,12 @@
 {
     "files.associations": {
         "stdio.h": "c",
-        "main.h": "c"
+        "main.h": "c",
+        "string.h": "c",
+        "lcd.h": "c",
+        "pthread.h": "c",
+        "led.h": "c",
+        "datafile.h": "c",
+        "stdlib.h": "c"
     }
 }

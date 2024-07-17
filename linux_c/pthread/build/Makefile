@@ -123,6 +123,87 @@ main/fast:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+src/lcd.o: src/lcd.c.o
+
+.PHONY : src/lcd.o
+
+# target to build an object file
+src/lcd.c.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lcd.c.o
+.PHONY : src/lcd.c.o
+
+src/lcd.i: src/lcd.c.i
+
+.PHONY : src/lcd.i
+
+# target to preprocess a source file
+src/lcd.c.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lcd.c.i
+.PHONY : src/lcd.c.i
+
+src/lcd.s: src/lcd.c.s
+
+.PHONY : src/lcd.s
+
+# target to generate assembly for a file
+src/lcd.c.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lcd.c.s
+.PHONY : src/lcd.c.s
+
+src/lcd_fun.o: src/lcd_fun.c.o
+
+.PHONY : src/lcd_fun.o
+
+# target to build an object file
+src/lcd_fun.c.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lcd_fun.c.o
+.PHONY : src/lcd_fun.c.o
+
+src/lcd_fun.i: src/lcd_fun.c.i
+
+.PHONY : src/lcd_fun.i
+
+# target to preprocess a source file
+src/lcd_fun.c.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lcd_fun.c.i
+.PHONY : src/lcd_fun.c.i
+
+src/lcd_fun.s: src/lcd_fun.c.s
+
+.PHONY : src/lcd_fun.s
+
+# target to generate assembly for a file
+src/lcd_fun.c.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lcd_fun.c.s
+.PHONY : src/lcd_fun.c.s
+
+src/led.o: src/led.c.o
+
+.PHONY : src/led.o
+
+# target to build an object file
+src/led.c.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/led.c.o
+.PHONY : src/led.c.o
+
+src/led.i: src/led.c.i
+
+.PHONY : src/led.i
+
+# target to preprocess a source file
+src/led.c.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/led.c.i
+.PHONY : src/led.c.i
+
+src/led.s: src/led.c.s
+
+.PHONY : src/led.s
+
+# target to generate assembly for a file
+src/led.c.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/led.c.s
+.PHONY : src/led.c.s
+
 src/main.o: src/main.c.o
 
 .PHONY : src/main.o
@@ -159,6 +240,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... main"
+	@echo "... src/lcd.o"
+	@echo "... src/lcd.i"
+	@echo "... src/lcd.s"
+	@echo "... src/lcd_fun.o"
+	@echo "... src/lcd_fun.i"
+	@echo "... src/lcd_fun.s"
+	@echo "... src/led.o"
+	@echo "... src/led.i"
+	@echo "... src/led.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

@@ -57,18 +57,66 @@ include CMakeFiles/main.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/main.dir/flags.make
 
+CMakeFiles/main.dir/src/lcd_fun.c.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/lcd_fun.c.o: ../src/lcd_fun.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/liuao/imx_app/linux_c/pthread/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/main.dir/src/lcd_fun.c.o"
+	arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/src/lcd_fun.c.o   -c /home/liuao/imx_app/linux_c/pthread/src/lcd_fun.c
+
+CMakeFiles/main.dir/src/lcd_fun.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/src/lcd_fun.c.i"
+	arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/liuao/imx_app/linux_c/pthread/src/lcd_fun.c > CMakeFiles/main.dir/src/lcd_fun.c.i
+
+CMakeFiles/main.dir/src/lcd_fun.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/src/lcd_fun.c.s"
+	arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/liuao/imx_app/linux_c/pthread/src/lcd_fun.c -o CMakeFiles/main.dir/src/lcd_fun.c.s
+
+CMakeFiles/main.dir/src/lcd_fun.c.o.requires:
+
+.PHONY : CMakeFiles/main.dir/src/lcd_fun.c.o.requires
+
+CMakeFiles/main.dir/src/lcd_fun.c.o.provides: CMakeFiles/main.dir/src/lcd_fun.c.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lcd_fun.c.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/lcd_fun.c.o.provides
+
+CMakeFiles/main.dir/src/lcd_fun.c.o.provides.build: CMakeFiles/main.dir/src/lcd_fun.c.o
+
+
+CMakeFiles/main.dir/src/lcd.c.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/lcd.c.o: ../src/lcd.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/liuao/imx_app/linux_c/pthread/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/main.dir/src/lcd.c.o"
+	arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/src/lcd.c.o   -c /home/liuao/imx_app/linux_c/pthread/src/lcd.c
+
+CMakeFiles/main.dir/src/lcd.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/src/lcd.c.i"
+	arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/liuao/imx_app/linux_c/pthread/src/lcd.c > CMakeFiles/main.dir/src/lcd.c.i
+
+CMakeFiles/main.dir/src/lcd.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/src/lcd.c.s"
+	arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/liuao/imx_app/linux_c/pthread/src/lcd.c -o CMakeFiles/main.dir/src/lcd.c.s
+
+CMakeFiles/main.dir/src/lcd.c.o.requires:
+
+.PHONY : CMakeFiles/main.dir/src/lcd.c.o.requires
+
+CMakeFiles/main.dir/src/lcd.c.o.provides: CMakeFiles/main.dir/src/lcd.c.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/lcd.c.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/lcd.c.o.provides
+
+CMakeFiles/main.dir/src/lcd.c.o.provides.build: CMakeFiles/main.dir/src/lcd.c.o
+
+
 CMakeFiles/main.dir/src/main.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/main.c.o: ../src/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/liuao/imx_app/linux_c/pthread/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/main.dir/src/main.c.o"
-	gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/src/main.c.o   -c /home/liuao/imx_app/linux_c/pthread/src/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/liuao/imx_app/linux_c/pthread/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/main.dir/src/main.c.o"
+	arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/src/main.c.o   -c /home/liuao/imx_app/linux_c/pthread/src/main.c
 
 CMakeFiles/main.dir/src/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/src/main.c.i"
-	gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/liuao/imx_app/linux_c/pthread/src/main.c > CMakeFiles/main.dir/src/main.c.i
+	arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/liuao/imx_app/linux_c/pthread/src/main.c > CMakeFiles/main.dir/src/main.c.i
 
 CMakeFiles/main.dir/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/src/main.c.s"
-	gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/liuao/imx_app/linux_c/pthread/src/main.c -o CMakeFiles/main.dir/src/main.c.s
+	arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/liuao/imx_app/linux_c/pthread/src/main.c -o CMakeFiles/main.dir/src/main.c.s
 
 CMakeFiles/main.dir/src/main.c.o.requires:
 
@@ -81,17 +129,47 @@ CMakeFiles/main.dir/src/main.c.o.provides: CMakeFiles/main.dir/src/main.c.o.requ
 CMakeFiles/main.dir/src/main.c.o.provides.build: CMakeFiles/main.dir/src/main.c.o
 
 
+CMakeFiles/main.dir/src/led.c.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/led.c.o: ../src/led.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/liuao/imx_app/linux_c/pthread/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/main.dir/src/led.c.o"
+	arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/src/led.c.o   -c /home/liuao/imx_app/linux_c/pthread/src/led.c
+
+CMakeFiles/main.dir/src/led.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/src/led.c.i"
+	arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/liuao/imx_app/linux_c/pthread/src/led.c > CMakeFiles/main.dir/src/led.c.i
+
+CMakeFiles/main.dir/src/led.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/src/led.c.s"
+	arm-linux-gnueabihf-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/liuao/imx_app/linux_c/pthread/src/led.c -o CMakeFiles/main.dir/src/led.c.s
+
+CMakeFiles/main.dir/src/led.c.o.requires:
+
+.PHONY : CMakeFiles/main.dir/src/led.c.o.requires
+
+CMakeFiles/main.dir/src/led.c.o.provides: CMakeFiles/main.dir/src/led.c.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/led.c.o.provides.build
+.PHONY : CMakeFiles/main.dir/src/led.c.o.provides
+
+CMakeFiles/main.dir/src/led.c.o.provides.build: CMakeFiles/main.dir/src/led.c.o
+
+
 # Object files for target main
 main_OBJECTS = \
-"CMakeFiles/main.dir/src/main.c.o"
+"CMakeFiles/main.dir/src/lcd_fun.c.o" \
+"CMakeFiles/main.dir/src/lcd.c.o" \
+"CMakeFiles/main.dir/src/main.c.o" \
+"CMakeFiles/main.dir/src/led.c.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
+bin/main: CMakeFiles/main.dir/src/lcd_fun.c.o
+bin/main: CMakeFiles/main.dir/src/lcd.c.o
 bin/main: CMakeFiles/main.dir/src/main.c.o
+bin/main: CMakeFiles/main.dir/src/led.c.o
 bin/main: CMakeFiles/main.dir/build.make
 bin/main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/liuao/imx_app/linux_c/pthread/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable bin/main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/liuao/imx_app/linux_c/pthread/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable bin/main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -99,7 +177,10 @@ CMakeFiles/main.dir/build: bin/main
 
 .PHONY : CMakeFiles/main.dir/build
 
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/lcd_fun.c.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/lcd.c.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/main.c.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/src/led.c.o.requires
 
 .PHONY : CMakeFiles/main.dir/requires
 

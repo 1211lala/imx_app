@@ -1,5 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/main.dir/src/lcd_fun.c.o"
+  "CMakeFiles/main.dir/src/lcd.c.o"
   "CMakeFiles/main.dir/src/main.c.o"
+  "CMakeFiles/main.dir/src/led.c.o"
   "bin/main.pdb"
   "bin/main"
 )
