@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -28,25 +28,5 @@ sys/stat.h
 fcntl.h
 -
 string.h
--
-stdio.h
-/home/liuao/imx_app/linux_c/pthread/src/stdio.h
-unistd.h
--
-sys/types.h
-/home/liuao/imx_app/linux_c/pthread/src/sys/types.h
-stdlib.h
--
-pthread.h
--
-stdio.h
-/home/liuao/imx_app/linux_c/pthread/src/stdio.h
-unistd.h
--
-sys/types.h
-/home/liuao/imx_app/linux_c/pthread/src/sys/types.h
-stdlib.h
--
-pthread.h
 -
 
