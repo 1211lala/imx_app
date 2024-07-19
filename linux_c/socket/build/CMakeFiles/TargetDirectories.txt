@@ -1,0 +1,3 @@
+/home/liuao/imx_app/linux_c/pthread/build/CMakeFiles/rebuild_cache.dir
+/home/liuao/imx_app/linux_c/pthread/build/CMakeFiles/edit_cache.dir
+/home/liuao/imx_app/linux_c/pthread/build/CMakeFiles/main.dir

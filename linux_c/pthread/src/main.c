@@ -1,8 +1,8 @@
 #include "datafile.h"
+#include "semaphore.h"
 
 int main(int argc, char **argv)
 {
-
     // lcd_show_thread_start();
     // led_thread_thread();
 
