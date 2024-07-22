@@ -1,10 +1,11 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/main.dir/src/lcd.c.o"
   "CMakeFiles/main.dir/src/lcd_fun.c.o"
-  "CMakeFiles/main.dir/src/led.c.o"
+  "CMakeFiles/main.dir/src/gpio.c.o"
+  "CMakeFiles/main.dir/src/lcd.c.o"
   "CMakeFiles/main.dir/src/main.c.o"
-  "bin/main"
+  "CMakeFiles/main.dir/src/led.c.o"
   "bin/main.pdb"
+  "bin/main"
 )
 
 # Per-language clean rules from dependency scanning.

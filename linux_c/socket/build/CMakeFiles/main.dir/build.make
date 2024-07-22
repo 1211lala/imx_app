@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/liuao/imx_app/linux_c/pthread
+CMAKE_SOURCE_DIR = /home/liuao/imx_app/linux_c/socket
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/liuao/imx_app/linux_c/pthread/build
+CMAKE_BINARY_DIR = /home/liuao/imx_app/linux_c/socket/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/main.dir/depend.make
@@ -59,55 +59,55 @@ include CMakeFiles/main.dir/flags.make
 
 CMakeFiles/main.dir/src/lcd.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/lcd.c.o: ../src/lcd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/liuao/imx_app/linux_c/pthread/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/main.dir/src/lcd.c.o"
-	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/src/lcd.c.o   -c /home/liuao/imx_app/linux_c/pthread/src/lcd.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/liuao/imx_app/linux_c/socket/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/main.dir/src/lcd.c.o"
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/src/lcd.c.o   -c /home/liuao/imx_app/linux_c/socket/src/lcd.c
 
 CMakeFiles/main.dir/src/lcd.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/src/lcd.c.i"
-	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/liuao/imx_app/linux_c/pthread/src/lcd.c > CMakeFiles/main.dir/src/lcd.c.i
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/liuao/imx_app/linux_c/socket/src/lcd.c > CMakeFiles/main.dir/src/lcd.c.i
 
 CMakeFiles/main.dir/src/lcd.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/src/lcd.c.s"
-	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/liuao/imx_app/linux_c/pthread/src/lcd.c -o CMakeFiles/main.dir/src/lcd.c.s
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/liuao/imx_app/linux_c/socket/src/lcd.c -o CMakeFiles/main.dir/src/lcd.c.s
 
 CMakeFiles/main.dir/src/lcd_fun.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/lcd_fun.c.o: ../src/lcd_fun.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/liuao/imx_app/linux_c/pthread/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/main.dir/src/lcd_fun.c.o"
-	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/src/lcd_fun.c.o   -c /home/liuao/imx_app/linux_c/pthread/src/lcd_fun.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/liuao/imx_app/linux_c/socket/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/main.dir/src/lcd_fun.c.o"
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/src/lcd_fun.c.o   -c /home/liuao/imx_app/linux_c/socket/src/lcd_fun.c
 
 CMakeFiles/main.dir/src/lcd_fun.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/src/lcd_fun.c.i"
-	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/liuao/imx_app/linux_c/pthread/src/lcd_fun.c > CMakeFiles/main.dir/src/lcd_fun.c.i
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/liuao/imx_app/linux_c/socket/src/lcd_fun.c > CMakeFiles/main.dir/src/lcd_fun.c.i
 
 CMakeFiles/main.dir/src/lcd_fun.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/src/lcd_fun.c.s"
-	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/liuao/imx_app/linux_c/pthread/src/lcd_fun.c -o CMakeFiles/main.dir/src/lcd_fun.c.s
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/liuao/imx_app/linux_c/socket/src/lcd_fun.c -o CMakeFiles/main.dir/src/lcd_fun.c.s
 
 CMakeFiles/main.dir/src/led.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/led.c.o: ../src/led.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/liuao/imx_app/linux_c/pthread/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/main.dir/src/led.c.o"
-	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/src/led.c.o   -c /home/liuao/imx_app/linux_c/pthread/src/led.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/liuao/imx_app/linux_c/socket/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/main.dir/src/led.c.o"
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/src/led.c.o   -c /home/liuao/imx_app/linux_c/socket/src/led.c
 
 CMakeFiles/main.dir/src/led.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/src/led.c.i"
-	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/liuao/imx_app/linux_c/pthread/src/led.c > CMakeFiles/main.dir/src/led.c.i
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/liuao/imx_app/linux_c/socket/src/led.c > CMakeFiles/main.dir/src/led.c.i
 
 CMakeFiles/main.dir/src/led.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/src/led.c.s"
-	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/liuao/imx_app/linux_c/pthread/src/led.c -o CMakeFiles/main.dir/src/led.c.s
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/liuao/imx_app/linux_c/socket/src/led.c -o CMakeFiles/main.dir/src/led.c.s
 
 CMakeFiles/main.dir/src/main.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/main.c.o: ../src/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/liuao/imx_app/linux_c/pthread/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/main.dir/src/main.c.o"
-	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/src/main.c.o   -c /home/liuao/imx_app/linux_c/pthread/src/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/liuao/imx_app/linux_c/socket/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/main.dir/src/main.c.o"
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/src/main.c.o   -c /home/liuao/imx_app/linux_c/socket/src/main.c
 
 CMakeFiles/main.dir/src/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/src/main.c.i"
-	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/liuao/imx_app/linux_c/pthread/src/main.c > CMakeFiles/main.dir/src/main.c.i
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/liuao/imx_app/linux_c/socket/src/main.c > CMakeFiles/main.dir/src/main.c.i
 
 CMakeFiles/main.dir/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/src/main.c.s"
-	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/liuao/imx_app/linux_c/pthread/src/main.c -o CMakeFiles/main.dir/src/main.c.s
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/liuao/imx_app/linux_c/socket/src/main.c -o CMakeFiles/main.dir/src/main.c.s
 
 # Object files for target main
 main_OBJECTS = \
@@ -125,7 +125,7 @@ bin/main: CMakeFiles/main.dir/src/led.c.o
 bin/main: CMakeFiles/main.dir/src/main.c.o
 bin/main: CMakeFiles/main.dir/build.make
 bin/main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/liuao/imx_app/linux_c/pthread/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable bin/main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/liuao/imx_app/linux_c/socket/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable bin/main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -138,6 +138,6 @@ CMakeFiles/main.dir/clean:
 .PHONY : CMakeFiles/main.dir/clean
 
 CMakeFiles/main.dir/depend:
-	cd /home/liuao/imx_app/linux_c/pthread/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/liuao/imx_app/linux_c/pthread /home/liuao/imx_app/linux_c/pthread /home/liuao/imx_app/linux_c/pthread/build /home/liuao/imx_app/linux_c/pthread/build /home/liuao/imx_app/linux_c/pthread/build/CMakeFiles/main.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/liuao/imx_app/linux_c/socket/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/liuao/imx_app/linux_c/socket /home/liuao/imx_app/linux_c/socket /home/liuao/imx_app/linux_c/socket/build /home/liuao/imx_app/linux_c/socket/build /home/liuao/imx_app/linux_c/socket/build/CMakeFiles/main.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/main.dir/depend
 

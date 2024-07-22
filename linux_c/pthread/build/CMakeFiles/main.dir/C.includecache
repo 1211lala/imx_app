@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -29,14 +29,36 @@ led.h
 ../include/led.h
 lcd.h
 ../include/lcd.h
+gpio.h
+../include/gpio.h
+
+../include/gpio.h
 
 ../include/lcd.h
 
 ../include/led.h
 
+/home/liuao/imx_app/linux_c/pthread/src/gpio.c
+datafile.h
+/home/liuao/imx_app/linux_c/pthread/src/datafile.h
+
+/home/liuao/imx_app/linux_c/pthread/src/lcd.c
+datafile.h
+/home/liuao/imx_app/linux_c/pthread/src/datafile.h
+sys/mman.h
+-
+linux/fb.h
+-
+
+/home/liuao/imx_app/linux_c/pthread/src/lcd_fun.c
+lcd.h
+/home/liuao/imx_app/linux_c/pthread/src/lcd.h
+
+/home/liuao/imx_app/linux_c/pthread/src/led.c
+datafile.h
+/home/liuao/imx_app/linux_c/pthread/src/datafile.h
+
 /home/liuao/imx_app/linux_c/pthread/src/main.c
 datafile.h
 /home/liuao/imx_app/linux_c/pthread/src/datafile.h
-semaphore.h
-/home/liuao/imx_app/linux_c/pthread/src/semaphore.h
 

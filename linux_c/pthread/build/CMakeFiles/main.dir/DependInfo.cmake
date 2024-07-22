@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/home/liuao/imx_app/linux_c/pthread/src/gpio.c" "/home/liuao/imx_app/linux_c/pthread/build/CMakeFiles/main.dir/src/gpio.c.o"
   "/home/liuao/imx_app/linux_c/pthread/src/lcd.c" "/home/liuao/imx_app/linux_c/pthread/build/CMakeFiles/main.dir/src/lcd.c.o"
   "/home/liuao/imx_app/linux_c/pthread/src/lcd_fun.c" "/home/liuao/imx_app/linux_c/pthread/build/CMakeFiles/main.dir/src/lcd_fun.c.o"
   "/home/liuao/imx_app/linux_c/pthread/src/led.c" "/home/liuao/imx_app/linux_c/pthread/build/CMakeFiles/main.dir/src/led.c.o"

@@ -23,7 +23,15 @@ sys/stat.h
 -
 sys/types.h
 ../include/sys/types.h
+sys/socket.h
+-
+arpa/inet.h
+-
+netinet/in.h
+-
 pthread.h
+-
+semaphore.h
 -
 led.h
 ../include/led.h
@@ -34,9 +42,7 @@ lcd.h
 
 ../include/led.h
 
-/home/liuao/imx_app/linux_c/pthread/src/main.c
+/home/liuao/imx_app/linux_c/socket/src/main.c
 datafile.h
-/home/liuao/imx_app/linux_c/pthread/src/datafile.h
-semaphore.h
-/home/liuao/imx_app/linux_c/pthread/src/semaphore.h
+/home/liuao/imx_app/linux_c/socket/src/datafile.h
 

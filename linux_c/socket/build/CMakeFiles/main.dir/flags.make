@@ -6,5 +6,5 @@ C_FLAGS =
 
 C_DEFINES = 
 
-C_INCLUDES = -I/home/liuao/imx_app/linux_c/pthread/include 
+C_INCLUDES = -I/home/liuao/imx_app/linux_c/socket/include 
 
