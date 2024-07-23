@@ -42,6 +42,22 @@ lcd.h
 
 ../include/led.h
 
+/home/liuao/imx_app/linux_c/socket/src/lcd.c
+datafile.h
+/home/liuao/imx_app/linux_c/socket/src/datafile.h
+sys/mman.h
+-
+linux/fb.h
+-
+
+/home/liuao/imx_app/linux_c/socket/src/lcd_fun.c
+lcd.h
+/home/liuao/imx_app/linux_c/socket/src/lcd.h
+
+/home/liuao/imx_app/linux_c/socket/src/led.c
+datafile.h
+/home/liuao/imx_app/linux_c/socket/src/datafile.h
+
 /home/liuao/imx_app/linux_c/socket/src/main.c
 datafile.h
 /home/liuao/imx_app/linux_c/socket/src/datafile.h
