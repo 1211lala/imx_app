@@ -2,5 +2,5 @@
 
 void hello_fun(void)
 {
-    printf("hello linux\r\n");
+    printf("this is hello.c\r\n");
 }

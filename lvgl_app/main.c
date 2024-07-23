@@ -7,6 +7,8 @@
 #include <time.h>
 #include <sys/time.h>
 
+void lvgl_demo(void);
+
 #define DISP_BUF_SIZE (600 * 1024)
 
 int main(void)
@@ -16,15 +18,12 @@ int main(void)
 
     /*Linux frame buffer device init*/
     fbdev_init();
-
+#if 1
     /*A small buffer for LittlevGL to draw the screen's content*/
     static lv_color_t buf[DISP_BUF_SIZE];
-
-    /*Initialize a descriptor for the buffer*/
     static lv_disp_draw_buf_t disp_buf;
     lv_disp_draw_buf_init(&disp_buf, buf, NULL, DISP_BUF_SIZE);
 
-    /*Initialize and register a display driver*/
     static lv_disp_drv_t disp_drv;
     lv_disp_drv_init(&disp_drv);
     disp_drv.draw_buf = &disp_buf;
@@ -32,7 +31,21 @@ int main(void)
     disp_drv.hor_res = 1024;
     disp_drv.ver_res = 600;
     lv_disp_drv_register(&disp_drv);
+#else
+    static lv_disp_draw_buf_t draw_buf_dsc_3;
+    static lv_color_t buf_3_1[DISP_BUF_SIZE];                                /*A screen sized buffer*/
+    static lv_color_t buf_3_2[DISP_BUF_SIZE];                                /*Another screen sized buffer*/
+    lv_disp_draw_buf_init(&draw_buf_dsc_3, buf_3_1, buf_3_2, DISP_BUF_SIZE); /*Initialize the display buffer*/
 
+    static lv_disp_drv_t disp_drv;
+    lv_disp_drv_init(&disp_drv);
+    disp_drv.draw_buf = &draw_buf_dsc_3;
+    disp_drv.flush_cb = fbdev_flush;
+    disp_drv.hor_res = 1024;
+    disp_drv.ver_res = 600;
+    disp_drv.full_refresh = 1;
+    lv_disp_drv_register(&disp_drv);
+#endif
     evdev_init();
     static lv_indev_drv_t indev_drv_1;
     lv_indev_drv_init(&indev_drv_1); /*Basic initialization*/
@@ -42,37 +55,15 @@ int main(void)
     indev_drv_1.read_cb = evdev_read;
     lv_indev_t *mouse_indev = lv_indev_drv_register(&indev_drv_1);
 
-    /*Set a cursor for the mouse*/
-    // LV_IMG_DECLARE(mouse_cursor_icon)
-    // lv_obj_t * cursor_obj = lv_img_create(lv_scr_act()); /*Create an image object for the cursor */
-    // lv_img_set_src(cursor_obj, &mouse_cursor_icon);           /*Set the image source*/
-    // lv_indev_set_cursor(mouse_indev, cursor_obj);             /*Connect the image  object to the driver*/
-
-    /*Create a Demo*/
-    lv_demo_widgets();
-    // lv_demo_stress();
+    // lvgl_demo();
     // lv_demo_benchmark();
-    // lv_obj_t *btn1 = lv_btn_create(lv_scr_act());
-    // lv_obj_set_size(btn1, 100, 100);
-    // lv_obj_align(btn1, LV_ALIGN_CENTER, 400 * 1 + 100, 0);
-
-    // lv_obj_t *btn2 = lv_btn_create(lv_scr_act());
-    // lv_obj_set_size(btn2, 100, 100);
-    // lv_obj_align(btn2, LV_ALIGN_CENTER, 400 * 2 + 200, 0);
-
-    // lv_obj_t *btn3 = lv_btn_create(lv_scr_act());
-    // lv_obj_set_size(btn3, 400, 100);
-    // lv_obj_align(btn3, LV_ALIGN_CENTER, 400 * 3 + 300, 0);
-
-    // lv_obj_t *btn4 = lv_btn_create(lv_scr_act());
-    // lv_obj_set_size(btn4, 400, 250);
-    // lv_obj_align(btn4, LV_ALIGN_CENTER, 0, 0);
-
-    /*Handle LitlevGL tasks (tickless mode)*/
+    // lv_demo_stress();
+    lv_demo_widgets();
+    // lv_demo_music();
     while (1)
     {
         lv_timer_handler();
-        usleep(5000);
+        usleep(1000);
     }
 
     return 0;
@@ -96,4 +87,21 @@ uint32_t custom_tick_get(void)
 
     uint32_t time_ms = now_ms - start_ms;
     return time_ms;
+}
+
+void lvgl_demo(void)
+{
+    lv_fs_dir_t dir;
+    lv_fs_res_t res;
+    res = lv_fs_dir_open(&dir, "L:/");
+    char fn[256];
+    while (1)
+    {
+        res = lv_fs_dir_read(&dir, fn);
+        if (strlen(fn) == 0)
+        {
+            break;
+        }
+        printf("%s\n", fn);
+    }
 }
