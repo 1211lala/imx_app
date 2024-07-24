@@ -1,29 +1,62 @@
-# 定义对象文件变量
-obj := bin/hello.o bin/main.o bin/add.o
-CC	:= gcc
+
+
+
+
+
+CC := gcc
+CFLAGS := -Wall -O2
+TARGET := main
+SRC_DIR := src
+INL_DIR := include
 BIN_DIR := bin
 
-# main目标依赖于对象文件列表
-main:$(obj)
-	$(CC) $(obj) -o main
+SRC_FILES := $(wildcard $(SRC_DIR)/*.c)
+OBJ_FILES := $(patsubst $(SRC_DIR)/%.c, $(BIN_DIR)/%.o, $(SRC_FILES))
 
-# main.o目标依赖于main.c和hello.h
-bin/main.o: main.c hello.h | $(BIN_DIR)
-	$(CC) -c main.c -o  $(BIN_DIR)/main.o
+VPATH := $(SRC_DIR):$(INL_DIR)
 
-# hello.o目标依赖于hello.c和hello.h
-bin/hello.o: hello.c hello.h | $(BIN_DIR)
-	$(CC) -c hello.c -o  $(BIN_DIR)/hello.o
-
-# add.o目标依赖于add.c和hello.h
-bin/add.o: add.c hello.h | $(BIN_DIR)
-	$(CC) -c add.c -o  $(BIN_DIR)/add.o
-
-# 创建 bin 目录
-$(BIN_DIR):
+$(BIN_DIR)/$(TARGET): $(OBJ_FILES)
 	mkdir -p $(BIN_DIR)
+	$(CC) -o $@ $(OBJ_FILES) -I$(INL_DIR)
 
-# clean目标用于清理生成的文件
+$(OBJ_FILES): $(BIN_DIR)/%.o: $(SRC_DIR)/%.c
+	mkdir -p $(BIN_DIR)
+	$(CC) -c $< -o $@ -I$(INL_DIR)
+
+
+.PHONY : clean
 clean:
-	-rm -rf $(BIN_DIR)	main
+	rm -rf $(BIN_DIR)
+
+
+# CC      := gcc
+# CFLAGS = -Wall -O2
+# TARGET  := main
+# BIN_DIR := bin
+# SRC_DIR := src
+# INC_DIR := include
+
+# # VPATH 设置
+# VPATH := $(SRC_DIR):$(INC_DIR)
+
+# # 获取 src 目录下的所有 .c 文件并转换为 .o 文件
+# SRC_FILES := $(wildcard $(SRC_DIR)/*.c)
+# OBJ_FILES := $(patsubst $(SRC_DIR)/%.c, $(BIN_DIR)/%.o, $(SRC_FILES))
+
+# # 目标生成规则
+# $(BIN_DIR)/$(TARGET): $(OBJ_FILES)
+# 	mkdir -p $(BIN_DIR)
+# 	$(CC) -o $@ $(OBJ_FILES) -I$(INC_DIR)
+
+# # 每个 .c 文件的编译规则
+# $(OBJ_FILES): $(BIN_DIR)/%.o: $(SRC_DIR)/%.c
+# 	mkdir -p $(BIN_DIR)
+# 	$(CC) -c $< -o $@ -I$(INC_DIR)
+
+
+# .PHONY: clean
+# clean:
+# 	-rm -rf $(BIN_DIR)
+
+
 
