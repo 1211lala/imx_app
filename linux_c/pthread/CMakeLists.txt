@@ -12,9 +12,10 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 file(GLOB FILE ${PROJECT_SOURCE_DIR}/src/*.c)
 
 # 设置编译器
-# set(CMAKE_C_COMPILER gcc)
-set(CMAKE_C_COMPILER arm-linux-gnueabihf-gcc)
+set(CMAKE_C_COMPILER gcc)
+# set(CMAKE_C_COMPILER arm-linux-gnueabihf-gcc)
 # set(CMAKE_CXX_COMPILER arm-linux-gnueabihf-g++)
+
 
 # 添加可执行文件
 add_executable(main ${FILE})

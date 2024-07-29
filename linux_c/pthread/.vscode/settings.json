@@ -10,6 +10,8 @@
         "stdlib.h": "c",
         "semaphore.h": "c",
         "types.h": "c",
-        "gpio.h": "c"
+        "gpio.h": "c",
+        "uart.h": "c",
+        "unistd.h": "c"
     }
 }
