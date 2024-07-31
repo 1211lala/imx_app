@@ -1,1 +1,1 @@
-gcc -rdynamic CMakeFiles/main.dir/src/gpio.c.o CMakeFiles/main.dir/src/lcd.c.o CMakeFiles/main.dir/src/lcd_fun.c.o CMakeFiles/main.dir/src/led.c.o CMakeFiles/main.dir/src/main.c.o CMakeFiles/main.dir/src/uart.c.o -o bin/main  -lpthread 
+arm-linux-gnueabihf-gcc   -rdynamic CMakeFiles/main.dir/src/gpio.c.o CMakeFiles/main.dir/src/lcd.c.o CMakeFiles/main.dir/src/lcd_fun.c.o CMakeFiles/main.dir/src/led.c.o CMakeFiles/main.dir/src/main.c.o CMakeFiles/main.dir/src/uart.c.o  -o bin/main  -lpthread 
