@@ -48,7 +48,7 @@ static void io_handler(int sig, siginfo_t *info, void *context)
 }
 
 
-#define TTY_DEV "/dev/ttymxc2"
+#define TTY_DEV "/dev/ttymxc1"
 
 static pthread_t tip;
 static struct termios old_cfg;       // 用于保存终端的配置参数

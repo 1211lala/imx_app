@@ -17,9 +17,6 @@ CMakeFiles/main.dir/src/lcd_fun.c.o
  ../include/lcd.h
  /home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/linux_c/pthread/src/lcd_fun.c
 CMakeFiles/main.dir/src/led.c.o
- ../include/datafile.h
- ../include/gpio.h
- ../include/lcd.h
  ../include/led.h
  /home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/linux_c/pthread/src/led.c
 CMakeFiles/main.dir/src/main.c.o

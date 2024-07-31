@@ -1,47 +1,21 @@
-#include "datafile.h"
+// #include "datafile.h"
 
-#define LED_TRIGGER "/sys/class/leds/sys-led/trigger"
-#define LED_BRIGHTNESS "/sys/class/leds/sys-led/brightness"
+#include "stdio.h"
+#include "unistd.h"
+#include "sys/types.h"
+#include "sys/stat.h"
+#include "fcntl.h"
+#include "stdlib.h"
+#include "string.h"
+#include "led.h"
 
-int led_set_level(int value)
-{
-    int fd1, fd2;
-    fd1 = open(LED_TRIGGER, O_RDWR);
-    if (0 > fd1)
-    {
-        perror("open error");
-        return -1;
-    }
-    fd2 = open(LED_BRIGHTNESS, O_RDWR);
-    if (0 > fd2)
-    {
-        perror("open error");
-        return -1;
-    }
+#define LED_ON 1
+#define LED_OFF 0
 
-    if (value == 1)
-    {
-        write(fd1, "none", 4); // 先将触发模式设置为 none
-        write(fd2, "1", 1);    // 点亮 LED
-    }
-    else if (value == 0)
-    {
-        write(fd1, "none", 4); // 先将触发模式设置为 none
-        write(fd2, "0", 1);    // LED 灭s
-    }
-    else
-    {
-        write(fd1, "heartbeat", strlen("heartbeat"));
-    }
+// #define DEV_PATH "/dev/beep_05_01"
+#define DEV_PATH "/dev/led_01_03"
 
-    close(fd1);
-    close(fd2);
-    return 0;
-}
 
-/*******************************************************************************************/
-/*******************************************************************************************/
-/*******************************************************************************************/
 pthread_t led_tid;
 int led_thread_thread(void)
 {
@@ -52,11 +26,16 @@ int led_thread_thread(void)
 
 void *led_ctrl(void *arg)
 {
+    int fd = open(DEV_PATH, O_RDWR);
+    static char send_buf[1];
     while (1)
     {
-        led_set_level(1);
+        send_buf[0] = LED_ON;
+        write(fd, &send_buf[0], 1);
         usleep(100000);
-        led_set_level(0);
+        send_buf[0] = LED_OFF;
+        write(fd, &send_buf[0], 1);
         usleep(100000);
     }
+    close(fd);
 }

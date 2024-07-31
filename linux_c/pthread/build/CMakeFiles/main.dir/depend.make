@@ -16,9 +16,6 @@ CMakeFiles/main.dir/src/lcd.c.o: ../src/lcd.c
 CMakeFiles/main.dir/src/lcd_fun.c.o: ../include/lcd.h
 CMakeFiles/main.dir/src/lcd_fun.c.o: ../src/lcd_fun.c
 
-CMakeFiles/main.dir/src/led.c.o: ../include/datafile.h
-CMakeFiles/main.dir/src/led.c.o: ../include/gpio.h
-CMakeFiles/main.dir/src/led.c.o: ../include/lcd.h
 CMakeFiles/main.dir/src/led.c.o: ../include/led.h
 CMakeFiles/main.dir/src/led.c.o: ../src/led.c
 
