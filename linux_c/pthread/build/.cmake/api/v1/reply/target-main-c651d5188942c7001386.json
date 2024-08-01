@@ -11,6 +11,7 @@
 		"commands" : 
 		[
 			"add_executable",
+			"target_link_libraries",
 			"include_directories"
 		],
 		"files" : 
@@ -31,6 +32,12 @@
 			{
 				"command" : 1,
 				"file" : 0,
+				"line" : 24,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
 				"line" : 9,
 				"parent" : 0
 			}
@@ -39,17 +46,11 @@
 	"compileGroups" : 
 	[
 		{
-			"compileCommandFragments" : 
-			[
-				{
-					"fragment" : " "
-				}
-			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 2,
-					"path" : "/home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/linux_c/pthread/include"
+					"backtrace" : 3,
+					"path" : "/home/liuao/imx6ull/user_uboot_linux_rootfs/imx_app/linux_c/pthread/include"
 				}
 			],
 			"language" : "C",
@@ -74,6 +75,7 @@
 				"role" : "flags"
 			},
 			{
+				"backtrace" : 2,
 				"fragment" : "-lpthread",
 				"role" : "libraries"
 			}

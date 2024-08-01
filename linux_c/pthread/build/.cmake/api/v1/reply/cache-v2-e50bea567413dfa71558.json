@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/linux_c/pthread/build"
+			"value" : "/home/liuao/imx6ull/user_uboot_linux_rootfs/imx_app/linux_c/pthread/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -79,7 +79,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "16"
+			"value" : "27"
 		},
 		{
 			"name" : "CMAKE_CACHE_PATCH_VERSION",
@@ -91,7 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "3"
+			"value" : "9"
 		},
 		{
 			"name" : "CMAKE_COLOR_MAKEFILE",
@@ -523,7 +523,7 @@
 				}
 			],
 			"type" : "BOOL",
-			"value" : "OFF"
+			"value" : ""
 		},
 		{
 			"name" : "CMAKE_EXTRA_GENERATOR",
@@ -536,6 +536,18 @@
 			],
 			"type" : "INTERNAL",
 			"value" : ""
+		},
+		{
+			"name" : "CMAKE_FIND_PACKAGE_REDIRECTS_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake."
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/liuao/imx6ull/user_uboot_linux_rootfs/imx_app/linux_c/pthread/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -595,7 +607,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/linux_c/pthread"
+			"value" : "/home/liuao/imx6ull/user_uboot_linux_rootfs/imx_app/linux_c/pthread"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -883,7 +895,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/share/cmake-3.16"
+			"value" : "/usr/share/cmake-3.27"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1094,6 +1106,22 @@
 			"value" : "/usr/bin/strip"
 		},
 		{
+			"name" : "CMAKE_TAPI",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a program."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "CMAKE_TAPI-NOTFOUND"
+		},
+		{
 			"name" : "CMAKE_UNAME",
 			"properties" : 
 			[
@@ -1131,7 +1159,19 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/linux_c/pthread/build"
+			"value" : "/home/liuao/imx6ull/user_uboot_linux_rootfs/imx_app/linux_c/pthread/build"
+		},
+		{
+			"name" : "MyProject_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
 		},
 		{
 			"name" : "MyProject_SOURCE_DIR",
@@ -1143,7 +1183,19 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/linux_c/pthread"
+			"value" : "/home/liuao/imx6ull/user_uboot_linux_rootfs/imx_app/linux_c/pthread"
+		},
+		{
+			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "linker supports push/pop state"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "TRUE"
 		}
 	],
 	"kind" : "cache",
