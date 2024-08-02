@@ -1,0 +1,3 @@
+/home/liuao/imx6ull/user_uboot_linux_rootfs/imx_app/linux_c/io/build/CMakeFiles/main.dir
+/home/liuao/imx6ull/user_uboot_linux_rootfs/imx_app/linux_c/io/build/CMakeFiles/edit_cache.dir
+/home/liuao/imx6ull/user_uboot_linux_rootfs/imx_app/linux_c/io/build/CMakeFiles/rebuild_cache.dir
