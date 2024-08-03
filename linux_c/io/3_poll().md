@@ -77,7 +77,7 @@ int main(void)
         {
             printf("select timeout\r\n");
         }
-
+            
         if (fds[0].revents & POLLIN)
         {
             ret = read(0, buf, sizeof(buf));

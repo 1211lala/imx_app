@@ -6,5 +6,5 @@ C_DEFINES =
 
 C_INCLUDES = -I/home/liuao/imx6ull/user_uboot_linux_rootfs/imx_app/linux_c/pthread/include
 
-C_FLAGS = 
+C_FLAGS = -g
 

@@ -4,9 +4,8 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
-#include <string.h>
+#include <signal.h>
 #include <linux/input.h>
-#include "sys/epoll.h"
 
 #define error_fun(xx, yy) \
     if (xx < 0)           \
@@ -15,69 +14,37 @@
         exit(-1);         \
     }
 
-struct input_event mouse_input;
-int mouse_fd, ret;
-char buf[100];
+static int devfd, ret;
+struct input_event dev_input;
+char buf[100] = {0};
 
-
-fd_set read_set;
-struct pollfd fds[2];
+static void sigio_handler(int sig)
+{
+    if (SIGIO != sig)
+        return;
+    if (dev_input.type == EV_MSC)
+    {
+        printf("键盘事件:code=%d, value=%d\n",dev_input.code, dev_input.value);
+    }
+}
 
 int main(void)
 {
-    epoll_create1(0);
+    devfd = open("/dev/input/event1", O_RDONLY);
+    error_fun(devfd, "open error");
 
-    EPOLL_CTL_ADD
+    /* 使能键盘文件异步IO 与非阻塞IO*/
+    int flag = fcntl(devfd, F_GETFL);
+    flag |= O_ASYNC | O_NONBLOCK;
+    fcntl(devfd, F_SETFL, flag);
 
-    epoll_wait();
-    /* 设置键盘的FLAG */
-    int flag = 0;
-    flag = fcntl(0, F_GETFL);
-    flag |= O_NONBLOCK;
-    ret = fcntl(0, F_SETFL, flag);
+    /* 设置异步 I/O 的所有者 */
+    fcntl(devfd, F_SETOWN, getpid());
 
-    /* 尝试打开事件设备文件，使用正确的设备文件路径 */
-    mouse_fd = open("/dev/input/event2", O_RDONLY | O_NONBLOCK);
-    error_fun(mouse_fd, "open error");
+    signal(SIGIO, sigio_handler);
 
     while (1)
     {
-        /* 同时读取键盘和鼠标 */
-        fds[0].fd = 0;
-        fds[0].events = POLLIN; //只关心数据可读
-        fds[0].revents = 0;
 
-        fds[1].fd = mouse_fd;
-        fds[1].events = POLLIN; //只关心数据可读
-        fds[1].revents = 0;
-
-
-        ret = poll(fds, 2, -1);
-        if (ret < 0)
-        {
-            perror("select()");
-        }
-        else if (ret == 0)
-        {
-            printf("select timeout\r\n");
-        }
-
-        if (fds[0].revents & POLLIN)
-        {
-            ret = read(0, buf, sizeof(buf));
-            buf[ret - 1] = '\0';
-            printf("键盘读取到: %s\r\n", buf);
-        }
-        if (fds[1].revents & POLLIN)
-        {
-            ret = read(mouse_fd, &mouse_input, sizeof(struct input_event));
-            printf("type: %d\n", mouse_input.type);
-            printf("code: %d\n", mouse_input.code);
-            printf("value: %d\n", mouse_input.value);
-        }
     }
-
-    /* 关闭文件 */
-    close(mouse_fd);
-    exit(0);
 }

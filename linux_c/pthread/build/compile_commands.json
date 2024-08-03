@@ -1,0 +1,38 @@
+[
+{
+  "directory": "/home/liuao/imx6ull/user_uboot_linux_rootfs/imx_app/linux_c/pthread/build",
+  "command": "arm-linux-gnueabihf-gcc  -I/home/liuao/imx6ull/user_uboot_linux_rootfs/imx_app/linux_c/pthread/include -g -o CMakeFiles/main.dir/src/gpio.c.o -c /home/liuao/imx6ull/user_uboot_linux_rootfs/imx_app/linux_c/pthread/src/gpio.c",
+  "file": "/home/liuao/imx6ull/user_uboot_linux_rootfs/imx_app/linux_c/pthread/src/gpio.c",
+  "output": "CMakeFiles/main.dir/src/gpio.c.o"
+},
+{
+  "directory": "/home/liuao/imx6ull/user_uboot_linux_rootfs/imx_app/linux_c/pthread/build",
+  "command": "arm-linux-gnueabihf-gcc  -I/home/liuao/imx6ull/user_uboot_linux_rootfs/imx_app/linux_c/pthread/include -g -o CMakeFiles/main.dir/src/lcd.c.o -c /home/liuao/imx6ull/user_uboot_linux_rootfs/imx_app/linux_c/pthread/src/lcd.c",
+  "file": "/home/liuao/imx6ull/user_uboot_linux_rootfs/imx_app/linux_c/pthread/src/lcd.c",
+  "output": "CMakeFiles/main.dir/src/lcd.c.o"
+},
+{
+  "directory": "/home/liuao/imx6ull/user_uboot_linux_rootfs/imx_app/linux_c/pthread/build",
+  "command": "arm-linux-gnueabihf-gcc  -I/home/liuao/imx6ull/user_uboot_linux_rootfs/imx_app/linux_c/pthread/include -g -o CMakeFiles/main.dir/src/lcd_fun.c.o -c /home/liuao/imx6ull/user_uboot_linux_rootfs/imx_app/linux_c/pthread/src/lcd_fun.c",
+  "file": "/home/liuao/imx6ull/user_uboot_linux_rootfs/imx_app/linux_c/pthread/src/lcd_fun.c",
+  "output": "CMakeFiles/main.dir/src/lcd_fun.c.o"
+},
+{
+  "directory": "/home/liuao/imx6ull/user_uboot_linux_rootfs/imx_app/linux_c/pthread/build",
+  "command": "arm-linux-gnueabihf-gcc  -I/home/liuao/imx6ull/user_uboot_linux_rootfs/imx_app/linux_c/pthread/include -g -o CMakeFiles/main.dir/src/led.c.o -c /home/liuao/imx6ull/user_uboot_linux_rootfs/imx_app/linux_c/pthread/src/led.c",
+  "file": "/home/liuao/imx6ull/user_uboot_linux_rootfs/imx_app/linux_c/pthread/src/led.c",
+  "output": "CMakeFiles/main.dir/src/led.c.o"
+},
+{
+  "directory": "/home/liuao/imx6ull/user_uboot_linux_rootfs/imx_app/linux_c/pthread/build",
+  "command": "arm-linux-gnueabihf-gcc  -I/home/liuao/imx6ull/user_uboot_linux_rootfs/imx_app/linux_c/pthread/include -g -o CMakeFiles/main.dir/src/main.c.o -c /home/liuao/imx6ull/user_uboot_linux_rootfs/imx_app/linux_c/pthread/src/main.c",
+  "file": "/home/liuao/imx6ull/user_uboot_linux_rootfs/imx_app/linux_c/pthread/src/main.c",
+  "output": "CMakeFiles/main.dir/src/main.c.o"
+},
+{
+  "directory": "/home/liuao/imx6ull/user_uboot_linux_rootfs/imx_app/linux_c/pthread/build",
+  "command": "arm-linux-gnueabihf-gcc  -I/home/liuao/imx6ull/user_uboot_linux_rootfs/imx_app/linux_c/pthread/include -g -o CMakeFiles/main.dir/src/uart.c.o -c /home/liuao/imx6ull/user_uboot_linux_rootfs/imx_app/linux_c/pthread/src/uart.c",
+  "file": "/home/liuao/imx6ull/user_uboot_linux_rootfs/imx_app/linux_c/pthread/src/uart.c",
+  "output": "CMakeFiles/main.dir/src/uart.c.o"
+}
+]
