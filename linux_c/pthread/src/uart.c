@@ -15,7 +15,7 @@
 
 static int fd = 0;
 
-#define TTY_DEV "/dev/ttymxc1"
+#define TTY_DEV "/dev/ttymxc2"
 
 /**
  ** 信号处理函数，当串口有数据可读时，会跳转到该函数执行
@@ -154,7 +154,15 @@ void *uart_start(void *arg)
             printf("接收完: %s\r\n", buf);
             cnt = 0;
         }
-        write(fd, w_buf, 8);
+
+        static int tt = 0;
+        if(tt++  > 100)
+        {
+            tt = 0;
+            write(fd, "12345678\r\n", 10);
+            printf("发送完成\r\n");
+        }
+        
         usleep(10000);
     }
 #endif

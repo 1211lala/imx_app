@@ -1,0 +1,1 @@
+CSRCS += $(wildcard $(LVGL_DIR)/lvgl_ui/*.c)

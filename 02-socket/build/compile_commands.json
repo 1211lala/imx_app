@@ -1,0 +1,25 @@
+[
+{
+  "directory": "/home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/linux_c/socket/build",
+  "command": "gcc  -I../include  -g   -o CMakeFiles/main.dir/src/lcd.c.o   -c /home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/linux_c/socket/src/lcd.c",
+  "file": "/home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/linux_c/socket/src/lcd.c"
+},
+
+{
+  "directory": "/home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/linux_c/socket/build",
+  "command": "gcc  -I../include  -g   -o CMakeFiles/main.dir/src/lcd_fun.c.o   -c /home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/linux_c/socket/src/lcd_fun.c",
+  "file": "/home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/linux_c/socket/src/lcd_fun.c"
+},
+
+{
+  "directory": "/home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/linux_c/socket/build",
+  "command": "gcc  -I../include  -g   -o CMakeFiles/main.dir/src/led.c.o   -c /home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/linux_c/socket/src/led.c",
+  "file": "/home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/linux_c/socket/src/led.c"
+},
+
+{
+  "directory": "/home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/linux_c/socket/build",
+  "command": "gcc  -I../include  -g   -o CMakeFiles/main.dir/src/main.c.o   -c /home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/linux_c/socket/src/main.c",
+  "file": "/home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/linux_c/socket/src/main.c"
+}
+]

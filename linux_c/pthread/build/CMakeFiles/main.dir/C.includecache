@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/datafile.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+unistd.h
+-
+fcntl.h
+-
+unistd.h
+-
+sys/stat.h
+-
+sys/types.h
+../include/sys/types.h
+pthread.h
+-
+led.h
+../include/led.h
+lcd.h
+../include/lcd.h
+gpio.h
+../include/gpio.h
+
+../include/gpio.h
+
+../include/lcd.h
+
+../include/led.h
+
+/home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/linux_c/pthread/src/main.c
+datafile.h
+/home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/linux_c/pthread/src/datafile.h
+
