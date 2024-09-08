@@ -1,0 +1,1 @@
+arm-linux-gnueabihf-gcc   -rdynamic CMakeFiles/main.dir/src/decode_input_event.c.o CMakeFiles/main.dir/src/main.c.o  -o bin/main  -Wl,-rpath,/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/tslib_1.21/tslib/lib -lpthread /home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/tslib_1.21/tslib/lib/libts.so 

@@ -317,16 +317,17 @@ void lvgl_ui(void)
 
     // /* 更新图表 */
     lv_chart_refresh(chart);
-    
 }
 
 void chart_draw_event_cb(lv_event_t *e)
 {
-    lv_obj_draw_part_dsc_t * dsc = lv_event_get_draw_part_dsc(e);
-    if(!lv_obj_draw_part_check_type(dsc, &lv_chart_class, LV_CHART_DRAW_PART_TICK_LABEL)) return;
+    lv_obj_draw_part_dsc_t *dsc = lv_event_get_draw_part_dsc(e);
+    if (!lv_obj_draw_part_check_type(dsc, &lv_chart_class, LV_CHART_DRAW_PART_TICK_LABEL))
+        return;
 
-    if(dsc->id == LV_CHART_AXIS_PRIMARY_X && dsc->text) {
-        const char * month[] = {"T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8", "T9", "T10"};
+    if (dsc->id == LV_CHART_AXIS_PRIMARY_X && dsc->text)
+    {
+        const char *month[] = {"T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8", "T9", "T10"};
         lv_snprintf(dsc->text, dsc->text_length, "%s", month[dsc->value]);
     }
 }
@@ -391,8 +392,24 @@ void ctl_char_io(const char *dev, const char *status)
     close(fd);
 }
 
+LV_FONT_DECLARE(f24);
 void *lvgl_ui_task(void *arg)
 {
+
+    // lv_obj_t *label = lv_label_create(lv_scr_act());
+    // lv_obj_set_style_text_font(label, &f24, LV_STATE_DEFAULT);
+    // lv_label_set_text(label, "111你好sssssssssssssssssssssssssssssssssssssssssssssssd");
+    // lv_obj_set_style_text_color(label, lv_color_hex(0xFF0000), LV_STATE_DEFAULT);
+    // lv_obj_align(label, LV_ALIGN_CENTER, 100, 0);
+    // lv_obj_t *label2 = lv_label_create(lv_scr_act());
+    // lv_obj_set_style_text_font(label2, &lv_font_montserrat_48, LV_STATE_DEFAULT);
+    // lv_label_set_text_fmt(label2, "%s", "11111");
+    // lv_obj_align(label2, LV_ALIGN_CENTER, 0, 0);
+    // lv_obj_set_style_text_color(label2, lv_color_hex(0xFF0000), LV_STATE_DEFAULT);
+    // while (1)
+    // {
+    //     usleep(10000);
+    // }
     lvgl_ui();
     while (1)
     {
@@ -401,17 +418,19 @@ void *lvgl_ui_task(void *arg)
         if (cnt++ > 50)
         {
             flag++;
-            if(flag == 1)
+            if (flag == 1)
             {
                 img1 = lv_img_create(tile_4);
                 lv_img_set_src(img1, "L:/lvgl_src/set_48.bin");
                 lv_obj_align(img1, LV_ALIGN_CENTER, 0, 0);
-            }else if(flag == 2)
+            }
+            else if (flag == 2)
             {
                 img1 = lv_img_create(tile_4);
                 lv_img_set_src(img1, "L:/lvgl_src/trash.bin");
                 lv_obj_align(img1, LV_ALIGN_CENTER, 0, 0);
-            }else if(flag = 3)
+            }
+            else if (flag = 3)
             {
                 flag = 0;
                 img1 = lv_img_create(tile_4);

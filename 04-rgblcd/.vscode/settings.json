@@ -1,0 +1,30 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "main.h": "c",
+        "string.h": "c",
+        "lcd.h": "c",
+        "pthread.h": "c",
+        "led.h": "c",
+        "datafile.h": "c",
+        "stdlib.h": "c",
+        "semaphore.h": "c",
+        "in.h": "c",
+        "types.h": "c",
+        "input.h": "c",
+        "unistd.h": "c",
+        "array": "c",
+        "bitset": "c",
+        "string_view": "c",
+        "initializer_list": "c",
+        "utility": "c",
+        "decode_input_event.h": "c",
+        "input-event-codes.h": "c",
+        "stat.h": "c",
+        "fcntl.h": "c",
+        "fb.h": "c",
+        "ioctl.h": "c",
+        "mman.h": "c",
+        "jpeglib.h": "c"
+    }
+}
