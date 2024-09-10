@@ -123,6 +123,33 @@ main/fast:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+src/jpeg_fun.o: src/jpeg_fun.c.o
+
+.PHONY : src/jpeg_fun.o
+
+# target to build an object file
+src/jpeg_fun.c.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/jpeg_fun.c.o
+.PHONY : src/jpeg_fun.c.o
+
+src/jpeg_fun.i: src/jpeg_fun.c.i
+
+.PHONY : src/jpeg_fun.i
+
+# target to preprocess a source file
+src/jpeg_fun.c.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/jpeg_fun.c.i
+.PHONY : src/jpeg_fun.c.i
+
+src/jpeg_fun.s: src/jpeg_fun.c.s
+
+.PHONY : src/jpeg_fun.s
+
+# target to generate assembly for a file
+src/jpeg_fun.c.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/jpeg_fun.c.s
+.PHONY : src/jpeg_fun.c.s
+
 src/lcd_fun.o: src/lcd_fun.c.o
 
 .PHONY : src/lcd_fun.o
@@ -177,6 +204,33 @@ src/main.c.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/png_fun.o: src/png_fun.c.o
+
+.PHONY : src/png_fun.o
+
+# target to build an object file
+src/png_fun.c.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/png_fun.c.o
+.PHONY : src/png_fun.c.o
+
+src/png_fun.i: src/png_fun.c.i
+
+.PHONY : src/png_fun.i
+
+# target to preprocess a source file
+src/png_fun.c.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/png_fun.c.i
+.PHONY : src/png_fun.c.i
+
+src/png_fun.s: src/png_fun.c.s
+
+.PHONY : src/png_fun.s
+
+# target to generate assembly for a file
+src/png_fun.c.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/png_fun.c.s
+.PHONY : src/png_fun.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +240,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... main"
+	@echo "... src/jpeg_fun.o"
+	@echo "... src/jpeg_fun.i"
+	@echo "... src/jpeg_fun.s"
 	@echo "... src/lcd_fun.o"
 	@echo "... src/lcd_fun.i"
 	@echo "... src/lcd_fun.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/png_fun.o"
+	@echo "... src/png_fun.i"
+	@echo "... src/png_fun.s"
 .PHONY : help
 
 

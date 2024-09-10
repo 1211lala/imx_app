@@ -21,6 +21,8 @@ include_directories(    ${PROJECT_SOURCE_DIR}/include
                         # 链接tslib编译生成头文件位于ubuntu主机
                         /home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/tslib_1.21/tslib/include
                         /home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/jpeg/include
+                        /home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/zlib/include
+                        /home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/libpng/include
                         ) 
 
 # 链接库
@@ -29,4 +31,6 @@ target_link_libraries(  main
                         # 链接tslib编译生成的动态库位于ubuntu主机
                         /home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/tslib_1.21/tslib/lib/libts.so
                         /home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/jpeg/lib/libjpeg.so 
+                        /home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/libpng/lib/libpng.so
+                        /home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/zlib/lib/libz.so
                         )

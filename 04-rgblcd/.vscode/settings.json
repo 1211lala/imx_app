@@ -25,6 +25,10 @@
         "fb.h": "c",
         "ioctl.h": "c",
         "mman.h": "c",
-        "jpeglib.h": "c"
+        "jpeglib.h": "c",
+        "setjmp.h": "c",
+        "jpeg_fun.h": "c",
+        "png.h": "c",
+        "png_fun.h": "c"
     }
 }

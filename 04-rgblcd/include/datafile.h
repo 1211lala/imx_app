@@ -26,6 +26,8 @@ struct _lcddev
 
     int (*init)(struct _lcddev *);
     void (*drawPonit)(unsigned int, unsigned int, unsigned int);
+    int (*showJpg)(struct _lcddev *, const char *, u_int16_t , u_int16_t );
+    int (*showPng)(struct _lcddev *, const char *, u_int16_t , u_int16_t );
     void (*delete)(struct _lcddev *);
 };
 extern struct _lcddev lcddev;

@@ -1,10 +1,6 @@
 #include "datafile.h"
 
-struct _lcddev lcddev = {
-    .init = rgblcd_init,
-    .drawPonit = lcd_draw_point,
-    .delete = lcd_delete,
-};
+
 
 int rgblcd_init(struct _lcddev *lcd)
 {

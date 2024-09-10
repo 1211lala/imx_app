@@ -57,9 +57,22 @@ include CMakeFiles/main.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/main.dir/flags.make
 
+CMakeFiles/main.dir/src/jpeg_fun.c.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/jpeg_fun.c.o: ../src/jpeg_fun.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/04-rgblcd/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/main.dir/src/jpeg_fun.c.o"
+	arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/src/jpeg_fun.c.o   -c /home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/04-rgblcd/src/jpeg_fun.c
+
+CMakeFiles/main.dir/src/jpeg_fun.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/src/jpeg_fun.c.i"
+	arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/04-rgblcd/src/jpeg_fun.c > CMakeFiles/main.dir/src/jpeg_fun.c.i
+
+CMakeFiles/main.dir/src/jpeg_fun.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/src/jpeg_fun.c.s"
+	arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/04-rgblcd/src/jpeg_fun.c -o CMakeFiles/main.dir/src/jpeg_fun.c.s
+
 CMakeFiles/main.dir/src/lcd_fun.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/lcd_fun.c.o: ../src/lcd_fun.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/04-rgblcd/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/main.dir/src/lcd_fun.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/04-rgblcd/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/main.dir/src/lcd_fun.c.o"
 	arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/src/lcd_fun.c.o   -c /home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/04-rgblcd/src/lcd_fun.c
 
 CMakeFiles/main.dir/src/lcd_fun.c.i: cmake_force
@@ -72,7 +85,7 @@ CMakeFiles/main.dir/src/lcd_fun.c.s: cmake_force
 
 CMakeFiles/main.dir/src/main.c.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/main.c.o: ../src/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/04-rgblcd/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/main.dir/src/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/04-rgblcd/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/main.dir/src/main.c.o"
 	arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/src/main.c.o   -c /home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/04-rgblcd/src/main.c
 
 CMakeFiles/main.dir/src/main.c.i: cmake_force
@@ -83,21 +96,40 @@ CMakeFiles/main.dir/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/src/main.c.s"
 	arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/04-rgblcd/src/main.c -o CMakeFiles/main.dir/src/main.c.s
 
+CMakeFiles/main.dir/src/png_fun.c.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/png_fun.c.o: ../src/png_fun.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/04-rgblcd/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/main.dir/src/png_fun.c.o"
+	arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/src/png_fun.c.o   -c /home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/04-rgblcd/src/png_fun.c
+
+CMakeFiles/main.dir/src/png_fun.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/src/png_fun.c.i"
+	arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/04-rgblcd/src/png_fun.c > CMakeFiles/main.dir/src/png_fun.c.i
+
+CMakeFiles/main.dir/src/png_fun.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/src/png_fun.c.s"
+	arm-linux-gnueabihf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/04-rgblcd/src/png_fun.c -o CMakeFiles/main.dir/src/png_fun.c.s
+
 # Object files for target main
 main_OBJECTS = \
+"CMakeFiles/main.dir/src/jpeg_fun.c.o" \
 "CMakeFiles/main.dir/src/lcd_fun.c.o" \
-"CMakeFiles/main.dir/src/main.c.o"
+"CMakeFiles/main.dir/src/main.c.o" \
+"CMakeFiles/main.dir/src/png_fun.c.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
+bin/main: CMakeFiles/main.dir/src/jpeg_fun.c.o
 bin/main: CMakeFiles/main.dir/src/lcd_fun.c.o
 bin/main: CMakeFiles/main.dir/src/main.c.o
+bin/main: CMakeFiles/main.dir/src/png_fun.c.o
 bin/main: CMakeFiles/main.dir/build.make
 bin/main: /home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/tslib_1.21/tslib/lib/libts.so
 bin/main: /home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/jpeg/lib/libjpeg.so
+bin/main: /home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/libpng/lib/libpng.so
+bin/main: /home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/zlib/lib/libz.so
 bin/main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/04-rgblcd/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable bin/main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/04-rgblcd/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable bin/main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

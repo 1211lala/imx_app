@@ -6,5 +6,5 @@ C_FLAGS =   -std=gnu99
 
 C_DEFINES = 
 
-C_INCLUDES = -I/home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/04-rgblcd/include -I/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/tslib_1.21/tslib/include -I/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/jpeg/include 
+C_INCLUDES = -I/home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/04-rgblcd/include -I/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/tslib_1.21/tslib/include -I/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/jpeg/include -I/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/zlib/include -I/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/libpng/include 
 
