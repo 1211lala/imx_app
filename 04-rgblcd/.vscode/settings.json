@@ -29,6 +29,10 @@
         "setjmp.h": "c",
         "jpeg_fun.h": "c",
         "png.h": "c",
-        "png_fun.h": "c"
+        "png_fun.h": "c",
+        "ft2build.h": "c",
+        "wchar.h": "c",
+        "math.h": "c",
+        "freetype_fun.h": "c"
     }
 }
