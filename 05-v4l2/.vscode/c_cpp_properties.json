@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/jpeg/include/*",
+                "/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/libpng/include/*"
+            ],
+            "defines": [],
+            "cStandard": "c17",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}

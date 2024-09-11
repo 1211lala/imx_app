@@ -1,7 +1,6 @@
 #include "datafile.h"
 
 
-
 int rgblcd_init(struct _lcddev *lcd)
 {
     /* 固定参数 */
@@ -63,4 +62,25 @@ void lcd_draw_point(unsigned int x, unsigned int y, unsigned int color)
         return;
     lcddev.screenBase[y * lcddev.width + x] = color;
 #endif
+}
+
+int show_image(struct _lcddev *lcd, u_int32_t *showuBuf, struct IMG_DATA *img_data, u_int16_t x, u_int16_t y)
+{
+    showuBuf = showuBuf + (y * lcd->width + x);
+    for (u_int16_t i = 0; i < img_data->h; i++)
+    {
+        if (i + y > lcd->height - 1)
+        {
+            break;
+        }
+        for (u_int16_t j = 0; j < img_data->w; j++)
+        {
+            if (j + x > lcd->width - 1)
+            {
+                break;
+            }
+            showuBuf[j] = img_data->data[i * img_data->w + j];
+        }
+        showuBuf += lcd->width;
+    }
 }

@@ -1,0 +1,1 @@
+gcc -rdynamic CMakeFiles/main.dir/src/main.c.o -o bin/main  -Wl,-rpath,/home/liuao/third_lib/libpng/lib -lpthread /home/liuao/third_lib/libpng/lib/libpng.so 

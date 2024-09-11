@@ -63,7 +63,6 @@ int show_png_image(struct _lcddev *lcd, const char *path, u_int16_t x, u_int16_t
     u_int32_t valid_bytes = min_w * 3; /* 这里分配三个字节内存 重点 */
 
     /* 读取解码后的数据 */
-    u_int32_t *fb_line_buf = malloc(valid_bytes);
     png_bytepp row_pointers = png_get_rows(png_ptr, info_ptr); // 获取数据
     for (int i = 0; i < min_h; i++)
     {
@@ -78,12 +77,11 @@ int show_png_image(struct _lcddev *lcd, const char *path, u_int16_t x, u_int16_t
         addr += lcd->width;
     }
     png_destroy_read_struct(&png_ptr, &info_ptr, NULL);
-    free(fb_line_buf);
     fclose(png_file);
     return 0;
 }
 
-int png_decode(struct PNG_DATA *png_data, const char *path)
+int png_decode(struct IMG_DATA *png_data, const char *path)
 {
     FILE *png_file = fopen(path, "r");
     if (png_file == NULL)
@@ -120,9 +118,9 @@ int png_decode(struct PNG_DATA *png_data, const char *path)
     png_read_png(png_ptr, info_ptr, PNG_TRANSFORM_STRIP_ALPHA, NULL);
     u_int16_t image_h = png_get_image_height(png_ptr, info_ptr);
     u_int16_t image_w = png_get_image_width(png_ptr, info_ptr);
-    png_data->width = image_w;
-    png_data->height = image_h;
-    printf("分辨率: %d*%d\n", png_data->width, png_data->height);
+    png_data->w = image_w;
+    png_data->h = image_h;
+    printf("分辨率: %d*%d\n", png_data->w, png_data->h);
 
     /* 判断是不是 RGB888 */
     if ((8 != png_get_bit_depth(png_ptr, info_ptr)) && (PNG_COLOR_TYPE_RGB != png_get_color_type(png_ptr, info_ptr)))
@@ -132,18 +130,18 @@ int png_decode(struct PNG_DATA *png_data, const char *path)
         fclose(png_file);
         return -1;
     }
-    u_int32_t valid_bytes = png_data->width * 3; /* 这里分配三个字节内存 重点 */
+    u_int32_t valid_bytes = png_data->w * 3; /* 这里分配三个字节内存 重点 */
 
     /* 读取解码后的数据 */
     u_int32_t cnt = 0;
-    png_data->data = malloc(png_data->height * png_data->width * sizeof(u_int32_t));
-    printf("分配: %d字节\n", png_data->height * png_data->width * sizeof(u_int32_t));
+    png_data->data = malloc(png_data->h * png_data->w * sizeof(u_int32_t));
+    printf("分配: %ld字节\n", png_data->h * png_data->w * sizeof(u_int32_t));
     png_bytepp row_pointers = png_get_rows(png_ptr, info_ptr); // 获取数据
-    for (int i = 0; i < png_data->height; i++)
+    for (int i = 0; i < png_data->h; i++)
     {
         for (int j = 0; j < valid_bytes; j += 3)
         {
-            cnt = i * png_data->width + j / 3;
+            cnt = i * png_data->w + j / 3;
             png_data->data[cnt] = row_pointers[i][j] << 16 | row_pointers[i][j + 1] << 8 | row_pointers[i][j + 2];
         }
     }
