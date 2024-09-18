@@ -30,6 +30,12 @@
         "jpeg_fun.h": "c",
         "png.h": "c",
         "png_fun.h": "c",
+        "ft2build.h": "c",
+        "wchar.h": "c",
+        "math.h": "c",
+        "freetype_fun.h": "c",
+        "*.tcc": "c",
+        "fstream": "c",
         "videodev2.h": "c"
     }
 }
