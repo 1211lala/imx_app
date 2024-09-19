@@ -36,6 +36,7 @@
         "freetype_fun.h": "c",
         "*.tcc": "c",
         "fstream": "c",
-        "videodev2.h": "c"
+        "videodev2.h": "c",
+        "v4l2_ov5640.h": "c"
     }
 }

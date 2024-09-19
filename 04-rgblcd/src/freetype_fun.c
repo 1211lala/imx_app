@@ -1,21 +1,18 @@
 #include "freetype_fun.h"
 
-
-
-
 FT_Library library;
 FT_Face face;
 
-int freetype_init(const char *font, int angle)
+int freetype_init(const char *fontpath, int angle)
 {
     FT_Error error;
     FT_Vector pen;
     FT_Matrix matrix;
-    float rad; // 旋转角度
+    float rad;
     /* FreeType 初始化 */
     FT_Init_FreeType(&library);
     /* 加载 face 对象 */
-    error = FT_New_Face(library, font, 0, &face);
+    error = FT_New_Face(library, fontpath, 0, &face);
     if (error)
     {
         fprintf(stderr, "FT_New_Face error: %d\n", error);
@@ -55,8 +52,14 @@ void lcd_draw_character(struct _lcddev *lcd, int x, int y, const wchar_t *str, u
     size_t len = wcslen(str); // 计算字符的个数
     long int temp;
     int n;
-    int i, j, p, q;
-    int max_x, max_y, start_y, start_x;
+    int i,       // 在屏幕上显示的坐标X
+        j,       // 在屏幕上显示的坐标Y
+        p,       // 计算freetype数据开始显示的起始列数
+        q;       // 计算freetype数据开始显示的起始行数
+    int max_x,   // 字体单位宽度
+        max_y,   // 字体单位高度
+        start_y, // 字体开始显示的Y坐标
+        start_x; // 字体开始显示的X坐标
 
     // 循环加载各个字符
     for (n = 0; n < len; n++)
@@ -64,7 +67,9 @@ void lcd_draw_character(struct _lcddev *lcd, int x, int y, const wchar_t *str, u
         // 加载字形、转换得到位图数据
         if (FT_Load_Char(face, str[n], FT_LOAD_RENDER))
             continue;
+        /* start_y 为显示的左上角点的y  */
         start_y = y - slot->bitmap_top; // 计算字形轮廓上边 y 坐标起点位置 注意是减去 bitmap_top
+        /* 字的显示高度大于当前的y值 */
         if (0 > start_y)
         { // 如果为负数 如何处理？？
             q = -start_y;
@@ -77,9 +82,12 @@ void lcd_draw_character(struct _lcddev *lcd, int x, int y, const wchar_t *str, u
             temp = width * start_y;
             j = start_y;
         }
+
+        /* 计算最大的y坐标值  如果超过屏幕等于屏幕最大y值 */
         max_y = start_y + slot->bitmap.rows; // 计算字形轮廓下边 y 坐标结束位置
         if (max_y > (int)height)
             max_y = height;
+
         for (; j < max_y; j++, q++, temp += width)
         {
             start_x = x + slot->bitmap_left; // 起点位置要加上左边空余部分长度

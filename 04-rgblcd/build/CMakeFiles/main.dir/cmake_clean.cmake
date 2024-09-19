@@ -1,9 +1,14 @@
 file(REMOVE_RECURSE
   "CMakeFiles/main.dir/src/freetype_fun.c.o"
+  "CMakeFiles/main.dir/src/freetype_fun.c.o.d"
   "CMakeFiles/main.dir/src/jpeg_fun.c.o"
+  "CMakeFiles/main.dir/src/jpeg_fun.c.o.d"
   "CMakeFiles/main.dir/src/lcd_fun.c.o"
+  "CMakeFiles/main.dir/src/lcd_fun.c.o.d"
   "CMakeFiles/main.dir/src/main.c.o"
+  "CMakeFiles/main.dir/src/main.c.o.d"
   "CMakeFiles/main.dir/src/png_fun.c.o"
+  "CMakeFiles/main.dir/src/png_fun.c.o.d"
   "bin/main"
   "bin/main.pdb"
 )

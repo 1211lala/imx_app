@@ -6,7 +6,8 @@
                 "${workspaceFolder}/**",
                 "/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/jpeg/include/*",
                 "/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/libpng/include/*",
-                "/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/freetype/include/freetype2"
+                "/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/freetype/include/freetype2",
+                "/home/liuao/third_lib/freetype/include/freetype2/*"
             ],
             "defines": [],
             "cStandard": "c17",

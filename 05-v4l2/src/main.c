@@ -3,7 +3,6 @@
 #include "jpeg_fun.h"
 #include "png_fun.h"
 #include "freetype_fun.h"
-#include <linux/videodev2.h>
 
 #define Video0_Path "/dev/video1"
 
@@ -25,7 +24,7 @@ typedef struct cam_buf_info
 static cam_buf_info buf_infos[FRAMEBUFFER_COUNT];
 
 static int frm_width, frm_height; // 视频帧宽度和高度
-static u_int16_t width = 1024, height= 600;
+static u_int16_t width = 1024, height = 600;
 struct v4l2_capability cap = {0};
 int v4l2_fd = 0;
 int v4l2_dev_init(const char *path)
@@ -49,7 +48,7 @@ int v4l2_dev_init(const char *path)
 }
 
 /* 枚举出摄像头支持的所有像素格式：VIDIOC_ENUM_FMT */
-struct v4l2_fmtdesc fmtdesc;
+
 int v4l2_enum_fmt(void)
 {
     fmtdesc.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
@@ -63,7 +62,7 @@ int v4l2_enum_fmt(void)
     return 0;
 }
 /* 枚举摄像头所支持的所有视频采集分辨率 VIDIOC_ENUM_FRAMESIZES*/
-struct v4l2_frmsizeenum fresize;
+
 int v4l2_enum_framesize(void)
 {
     fresize.index = 0;

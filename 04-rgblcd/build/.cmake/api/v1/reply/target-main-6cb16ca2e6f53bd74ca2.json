@@ -11,6 +11,7 @@
 		"commands" : 
 		[
 			"add_executable",
+			"target_link_libraries",
 			"include_directories"
 		],
 		"files" : 
@@ -31,6 +32,12 @@
 			{
 				"command" : 1,
 				"file" : 0,
+				"line" : 31,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
 				"line" : 20,
 				"parent" : 0
 			}
@@ -42,40 +49,49 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : " "
-				},
-				{
 					"fragment" : "-std=gnu99"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 2,
-					"path" : "/home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/04-rgblcd/include"
+					"backtrace" : 3,
+					"path" : "/home/liuao/imx_app/04-rgblcd/include"
 				},
 				{
-					"backtrace" : 2,
+					"backtrace" : 3,
 					"path" : "/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/tslib_1.21/tslib/include"
 				},
 				{
-					"backtrace" : 2,
+					"backtrace" : 3,
 					"path" : "/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/jpeg/include"
 				},
 				{
-					"backtrace" : 2,
+					"backtrace" : 3,
 					"path" : "/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/zlib/include"
 				},
 				{
-					"backtrace" : 2,
+					"backtrace" : 3,
 					"path" : "/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/libpng/include"
 				},
 				{
-					"backtrace" : 2,
+					"backtrace" : 3,
 					"path" : "/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/freetype/include/freetype2"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/home/liuao/third_lib/freetype/include/freetype2"
 				}
 			],
 			"language" : "C",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "99"
+			},
 			"sourceIndexes" : 
 			[
 				0,
@@ -96,35 +112,62 @@
 				"role" : "flags"
 			},
 			{
-				"fragment" : "-Wl,-rpath,/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/tslib_1.21/tslib/lib:/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/jpeg/lib:/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/libpng/lib:/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/zlib/lib:/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/freetype/lib",
+				"fragment" : "-L/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/tslib_1.21/tslib/lib",
+				"role" : "libraryPath"
+			},
+			{
+				"fragment" : "-L/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/jpeg/lib",
+				"role" : "libraryPath"
+			},
+			{
+				"fragment" : "-L/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/libpng/lib",
+				"role" : "libraryPath"
+			},
+			{
+				"fragment" : "-L/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/zlib/lib",
+				"role" : "libraryPath"
+			},
+			{
+				"fragment" : "-L/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/freetype/lib",
+				"role" : "libraryPath"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/tslib_1.21/tslib/lib:/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/jpeg/lib:/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/libpng/lib:/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/zlib/lib:/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/freetype/lib:/home/liuao/third_lib/freetype/lib",
 				"role" : "libraries"
 			},
 			{
+				"backtrace" : 2,
 				"fragment" : "-lm",
 				"role" : "libraries"
 			},
 			{
+				"backtrace" : 2,
 				"fragment" : "-lpthread",
 				"role" : "libraries"
 			},
 			{
-				"fragment" : "/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/tslib_1.21/tslib/lib/libts.so",
+				"fragment" : "-lts",
 				"role" : "libraries"
 			},
 			{
-				"fragment" : "/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/jpeg/lib/libjpeg.so",
+				"fragment" : "-ljpeg",
 				"role" : "libraries"
 			},
 			{
-				"fragment" : "/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/libpng/lib/libpng.so",
+				"fragment" : "-lpng",
 				"role" : "libraries"
 			},
 			{
-				"fragment" : "/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/zlib/lib/libz.so",
+				"fragment" : "-lz",
 				"role" : "libraries"
 			},
 			{
-				"fragment" : "/home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/freetype/lib/libfreetype.so",
+				"fragment" : "-lfreetype",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "/home/liuao/third_lib/freetype/lib/libfreetype.so",
 				"role" : "libraries"
 			}
 		],
