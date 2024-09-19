@@ -1,30 +1,6 @@
 #include "v4l2_ov5640.h"
 #include <linux/videodev2.h>
-#include "datafile.h"
-
-#define FRAMEBUFFER_COUNT 3
-#define V4L2_PATH "/dev/video1"
-
-typedef struct CAMERA_BUF_INFO
-{
-    u_int16_t *start; /* 起始地址 */
-    u_int32_t length; /* 内存块大小 */
-} cam_buf_info;
-
-struct V4L2_DEV
-{
-    int fd;
-    const char *path;
-    u_int16_t w;                         /* V4L2画面宽度 */
-    u_int16_t h;                         /* V4L2画面高度 */
-    cam_buf_info buf[FRAMEBUFFER_COUNT]; /* V4L2帧缓存 */
-};
-
-struct V4L2_DEV v4l2 = {
-    .path = V4L2_PATH,
-    .h = 600,
-    .w = 1024,
-};
+#include "freetype_fun.h"
 
 int v4l2_dev_init(struct V4L2_DEV *v4l2dev)
 {
@@ -182,7 +158,7 @@ int v4l2_on(struct V4L2_DEV *v4l2dev)
     return 0;
 }
 
-void v4l2_read_data(struct V4L2_DEV *v4l2dev, struct _lcddev *lcd, u_int16_t *showbuf, u_int16_t x, u_int16_t y)
+void v4l2_show_video(struct V4L2_DEV *v4l2dev, struct _lcddev *lcd, u_int16_t *showbuf, u_int16_t x, u_int16_t y)
 {
     struct v4l2_buffer buf = {0};
     unsigned short *base;
@@ -204,23 +180,64 @@ void v4l2_read_data(struct V4L2_DEV *v4l2dev, struct _lcddev *lcd, u_int16_t *sh
         for (buf.index = 0; buf.index < FRAMEBUFFER_COUNT; buf.index++)
         {
             ioctl(v4l2dev->fd, VIDIOC_DQBUF, &buf);
-            base = (unsigned short *)showbuf + (x * lcd->width + y);
+            base = (unsigned short *)showbuf + (y * lcd->width + x);
             start = v4l2dev->buf[buf.index].start;
 
             for (int j = 0; j < min_h; j++)
             {
-                if (min_h + j > (lcd->height - 1))
+                if (y + j > (lcd->height - 1))
                     break;
                 if (x + min_w > (lcd->width - 1))
-                    memcpy(base, start, min_w * 2); // RGB565 一个像素占 2 个字节
-                else
                     memcpy(base, start, (lcd->width - x) * 2); // RGB565 一个像素占 2 个字节
+                else
+                    memcpy(base, start, min_w * 2); // RGB565 一个像素占 2 个字节
 
                 base += lcd->width;  // LCD 显示指向下一行
                 start += v4l2dev->w; // 指向下一行数据
             }
-
             ioctl(v4l2dev->fd, VIDIOC_QBUF, &buf); // 数据处理完之后、再入队、往复
         }
     }
+}
+
+int v4l2_get_video(struct V4L2_DEV *v4l2dev, struct _lcddev *lcd, u_int16_t *tempbuf, u_int16_t x, u_int16_t y)
+{
+    static int buf_cnt = 1;
+
+    struct v4l2_buffer buf = {0};
+
+    int min_w, min_h;
+    if (lcd->width > v4l2dev->w)
+        min_w = v4l2dev->w;
+    else
+        min_w = lcd->width;
+    if (lcd->height > v4l2dev->h)
+        min_h = v4l2dev->h;
+    else
+        min_h = lcd->height;
+
+    if (buf_cnt > FRAMEBUFFER_COUNT - 1)
+        buf_cnt = 0;
+    buf.index = buf_cnt;
+    buf.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
+    buf.memory = V4L2_MEMORY_MMAP;
+    // printf("buf_cnt: %d min_w: %d min_h: %d\n", buf_cnt, min_w, min_h);
+    ioctl(v4l2dev->fd, VIDIOC_DQBUF, &buf);
+    unsigned short *baseaddr = tempbuf + (y * lcd->width + x);
+    unsigned short *start = v4l2.buf[buf_cnt].start;
+    for (int j = 0; j < min_h; j++)
+    {
+        if (y + j > (lcd->height - 1))
+            break;
+        if (x + min_w > (lcd->width - 1))
+            memcpy(baseaddr, start, (lcd->width - x) * 2); // RGB565 一个像素占 2 个字节
+        else
+            memcpy(baseaddr, start, min_w * 2); // RGB565 一个像素占 2 个字节
+
+        baseaddr += lcd->width; // LCD 显示指向下一行
+        start += v4l2dev->w;    // 指向下一行数据
+    }
+    ioctl(v4l2dev->fd, VIDIOC_QBUF, &buf); // 数据处理完之后、再入队、往复
+    buf_cnt += 1;
+    return 0;
 }

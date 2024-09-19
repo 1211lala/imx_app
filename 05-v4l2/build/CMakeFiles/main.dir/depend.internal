@@ -23,6 +23,7 @@ CMakeFiles/main.dir/src/main.c.o
  ../include/jpeg_fun.h
  ../include/main.h
  ../include/png_fun.h
+ ../include/v4l2_ov5640.h
  /home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/freetype/include/freetype2/freetype/config/ftheader.h
  /home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/freetype/include/freetype2/ft2build.h
  /home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/05-v4l2/src/main.c
@@ -33,3 +34,10 @@ CMakeFiles/main.dir/src/png_fun.c.o
  /home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/libpng/include/pngconf.h
  /home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/libpng/include/pnglibconf.h
  /home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/05-v4l2/src/png_fun.c
+CMakeFiles/main.dir/src/v4l2_ov5640.c.o
+ ../include/datafile.h
+ ../include/freetype_fun.h
+ ../include/v4l2_ov5640.h
+ /home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/freetype/include/freetype2/freetype/config/ftheader.h
+ /home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/freetype/include/freetype2/ft2build.h
+ /home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/05-v4l2/src/v4l2_ov5640.c

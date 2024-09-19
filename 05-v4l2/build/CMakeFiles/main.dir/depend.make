@@ -22,6 +22,7 @@ CMakeFiles/main.dir/src/main.c.o: ../include/freetype_fun.h
 CMakeFiles/main.dir/src/main.c.o: ../include/jpeg_fun.h
 CMakeFiles/main.dir/src/main.c.o: ../include/main.h
 CMakeFiles/main.dir/src/main.c.o: ../include/png_fun.h
+CMakeFiles/main.dir/src/main.c.o: ../include/v4l2_ov5640.h
 CMakeFiles/main.dir/src/main.c.o: /home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/freetype/include/freetype2/freetype/config/ftheader.h
 CMakeFiles/main.dir/src/main.c.o: /home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/freetype/include/freetype2/ft2build.h
 CMakeFiles/main.dir/src/main.c.o: ../src/main.c
@@ -32,4 +33,11 @@ CMakeFiles/main.dir/src/png_fun.c.o: /home/liuao/imx6ull/user_uboot_linux_rootfs
 CMakeFiles/main.dir/src/png_fun.c.o: /home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/libpng/include/pngconf.h
 CMakeFiles/main.dir/src/png_fun.c.o: /home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/libpng/include/pnglibconf.h
 CMakeFiles/main.dir/src/png_fun.c.o: ../src/png_fun.c
+
+CMakeFiles/main.dir/src/v4l2_ov5640.c.o: ../include/datafile.h
+CMakeFiles/main.dir/src/v4l2_ov5640.c.o: ../include/freetype_fun.h
+CMakeFiles/main.dir/src/v4l2_ov5640.c.o: ../include/v4l2_ov5640.h
+CMakeFiles/main.dir/src/v4l2_ov5640.c.o: /home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/freetype/include/freetype2/freetype/config/ftheader.h
+CMakeFiles/main.dir/src/v4l2_ov5640.c.o: /home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/freetype/include/freetype2/ft2build.h
+CMakeFiles/main.dir/src/v4l2_ov5640.c.o: ../src/v4l2_ov5640.c
 

@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/05-v4l2/src/lcd_fun.c" "/home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/05-v4l2/build/CMakeFiles/main.dir/src/lcd_fun.c.o"
   "/home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/05-v4l2/src/main.c" "/home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/05-v4l2/build/CMakeFiles/main.dir/src/main.c.o"
   "/home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/05-v4l2/src/png_fun.c" "/home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/05-v4l2/build/CMakeFiles/main.dir/src/png_fun.c.o"
+  "/home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/05-v4l2/src/v4l2_ov5640.c" "/home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/05-v4l2/build/CMakeFiles/main.dir/src/v4l2_ov5640.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

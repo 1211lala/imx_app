@@ -52,6 +52,10 @@ datafile.h
 datafile.h
 ../include/datafile.h
 
+../include/v4l2_ov5640.h
+datafile.h
+../include/datafile.h
+
 /home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/freetype/include/freetype2/freetype/config/ftheader.h
 
 /home/liuao/imx6ull/user_uboot_linux_rootfs/third_lib/freetype/include/freetype2/ft2build.h
@@ -69,6 +73,6 @@ png_fun.h
 /home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/05-v4l2/src/png_fun.h
 freetype_fun.h
 /home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/05-v4l2/src/freetype_fun.h
-linux/videodev2.h
--
+v4l2_ov5640.h
+/home/liuao/imx6ull/user_uboot_linux_rootfs/user_rootfs/rootfs/imx_app/05-v4l2/src/v4l2_ov5640.h
 

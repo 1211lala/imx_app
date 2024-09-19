@@ -258,6 +258,33 @@ src/png_fun.c.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/png_fun.c.s
 .PHONY : src/png_fun.c.s
 
+src/v4l2_ov5640.o: src/v4l2_ov5640.c.o
+
+.PHONY : src/v4l2_ov5640.o
+
+# target to build an object file
+src/v4l2_ov5640.c.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/v4l2_ov5640.c.o
+.PHONY : src/v4l2_ov5640.c.o
+
+src/v4l2_ov5640.i: src/v4l2_ov5640.c.i
+
+.PHONY : src/v4l2_ov5640.i
+
+# target to preprocess a source file
+src/v4l2_ov5640.c.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/v4l2_ov5640.c.i
+.PHONY : src/v4l2_ov5640.c.i
+
+src/v4l2_ov5640.s: src/v4l2_ov5640.c.s
+
+.PHONY : src/v4l2_ov5640.s
+
+# target to generate assembly for a file
+src/v4l2_ov5640.c.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/v4l2_ov5640.c.s
+.PHONY : src/v4l2_ov5640.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -282,6 +309,9 @@ help:
 	@echo "... src/png_fun.o"
 	@echo "... src/png_fun.i"
 	@echo "... src/png_fun.s"
+	@echo "... src/v4l2_ov5640.o"
+	@echo "... src/v4l2_ov5640.i"
+	@echo "... src/v4l2_ov5640.s"
 .PHONY : help
 
 

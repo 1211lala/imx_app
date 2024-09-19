@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/src/lcd_fun.c.o"
   "CMakeFiles/main.dir/src/main.c.o"
   "CMakeFiles/main.dir/src/png_fun.c.o"
+  "CMakeFiles/main.dir/src/v4l2_ov5640.c.o"
   "bin/main"
   "bin/main.pdb"
 )
