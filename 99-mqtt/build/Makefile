@@ -123,6 +123,33 @@ main/fast:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+src/cJSON.o: src/cJSON.c.o
+
+.PHONY : src/cJSON.o
+
+# target to build an object file
+src/cJSON.c.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/cJSON.c.o
+.PHONY : src/cJSON.c.o
+
+src/cJSON.i: src/cJSON.c.i
+
+.PHONY : src/cJSON.i
+
+# target to preprocess a source file
+src/cJSON.c.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/cJSON.c.i
+.PHONY : src/cJSON.c.i
+
+src/cJSON.s: src/cJSON.c.s
+
+.PHONY : src/cJSON.s
+
+# target to generate assembly for a file
+src/cJSON.c.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/cJSON.c.s
+.PHONY : src/cJSON.c.s
+
 src/main.o: src/main.c.o
 
 .PHONY : src/main.o
@@ -159,6 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... main"
+	@echo "... src/cJSON.o"
+	@echo "... src/cJSON.i"
+	@echo "... src/cJSON.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
